@@ -3,9 +3,9 @@
 }
 
 header {
-  background-color: #7a4a12;
-  color: white;
-  padding: 20px;
+  background-color: #ffffff;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .header-container {
@@ -14,23 +14,25 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
 }
 
-.header-container h1 {
-  margin: 0;
-  font-size: 1.8rem;
+.brand {
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 
 nav a {
-  color: white;
+  color: #1e293b;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 nav a:hover,
@@ -38,11 +40,19 @@ nav a:focus {
   text-decoration: underline;
 }
 
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  min-height: 55vh;
+.header-button {
+  background-color: #1e293b;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.header-button:hover,
+.header-button:focus {
+  opacity: 0.9;
+}
 }
 
 #sobre {
@@ -60,19 +70,146 @@ main {
 }
 
 footer {
-  background-color: #3f2a16;
+  background-color: #1e293b;
   color: white;
-  padding: 30px 20px;
+  padding: 40px 24px;
 }
 
 .footer-container {
   max-width: 1100px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-container > div {
+  flex: 1;
+}
+
+.footer-container > div:nth-child(2) {
   text-align: center;
+}
+
+.footer-container > div:last-child {
+  text-align: right;
 }
 
 .footer-container p {
   margin: 8px 0;
+  line-height: 1.5;
+}.hero,
+.historia {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.hero-text h1,
+.historia-text h2,
+.processo h2,
+.destaque h2,
+.cta h2 {
+  color: #1e293b;
+}
+
+.hero-label,
+.section-label {
+  display: inline-block;
+  color: #475569;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0 0 20px;
+}
+
+.hero-text p,
+.historia-text p,
+.section-intro,
+.cta p {
+  line-height: 1.7;
+  color: #475569;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+  margin-top: 18px;
+  background-color: #1e293b;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.hero-visual,
+.historia-visual {
+  min-height: 320px;
+  border-radius: 12px;
+  background-color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ color: #ffffff;
+  font-weight: 700;
+}
+
+.processo {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.processo-etapas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.processo-etapas div {
+  padding: 28px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.processo-etapas strong {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #1e293b;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.destaque {
+  background-color: #1e293b;
+  color: white;
+  padding: 56px 32px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.destaque h2 {
+  color: white;
+}
+
+.cta {
+  text-align: center;
+  padding: 40px 20px 80px;
 }
 
 /* Responsividade para telas menores */
@@ -88,9 +225,15 @@ footer {
     gap: 12px;
   }
 
-  .header-container h1 {
-    font-size: 1.5rem;
-  }
+ .brand {
+  font-size: 1.3rem;
+}
+
+.header-button {
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+}
 
   main {
     padding: 40px 16px;
@@ -98,5 +241,43 @@ footer {
 
   #sobre h2 {
     font-size: 1.6rem;
-  }
+  }.footer-container {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-container > div:nth-child(2),
+.footer-container > div:last-child {
+  text-align: center;
+}
+
+.hero,
+.historia {
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-bottom: 50px;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+}
+
+.hero-visual,
+.historia-visual {
+  min-height: 220px;
+}
+
+.processo-etapas {
+  grid-template-columns: 1fr;
+}
+
+.destaque {
+  padding: 40px 20px;
+  margin-bottom: 50px;
+}
+
+.cta {
+  padding: 20px 10px 50px;
+}
 }
