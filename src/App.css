@@ -53,7 +53,7 @@ nav a:focus {
 .header-button:focus {
   opacity: 0.9;
 }
-}
+
 
 #sobre {
   text-align: center;
@@ -169,30 +169,44 @@ footer {
   margin-bottom: 80px;
 }
 
-.processo-etapas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.processo-detalhes {
   margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
-.processo-etapas div {
-  padding: 28px 20px;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-}
-
-.processo-etapas strong {
-  display: inline-flex;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-color: #1e293b;
-  color: white;
+.processo-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: center;
-  justify-content: center;
+  text-align: left;
+}
+
+.processo-texto h3 {
+  color: #1e293b;
   margin-bottom: 12px;
 }
+
+.processo-texto p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.processo-midia {
+  min-height: 220px;
+  background-color: #1e293b;
+  color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+ 
 
 .destaque {
   background-color: #1e293b;
@@ -280,4 +294,13 @@ footer {
 .cta {
   padding: 20px 10px 50px;
 }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
 }

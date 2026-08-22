@@ -55,35 +55,58 @@ function App() {
         </section>
 
         <section id="processo" className="processo">
-          <span className="section-label">Como fazemos</span>
+  <span className="section-label">Nosso processo</span>
 
-          <h2>Nosso Processo Artesanal</h2>
+  <h2>Processo Produtivo</h2>
 
-          <p className="section-intro">
-            Cuidado e tradição em cada etapa da produção.
-          </p>
+  <p className="section-intro">
+    Tradição, cuidado e qualidade em cada etapa da produção da cajuína.
+  </p>
 
-          <div className="processo-etapas">
-            <div>
-              <strong>1</strong>
-              <h3>Seleção do Caju</h3>
-              <p>Escolha cuidadosa dos frutos para garantir qualidade.</p>
-            </div>
+  <div className="processo-detalhes">
+    <div className="processo-item">
+      <div className="processo-texto">
+        <h3>Produção Artesanal</h3>
+        <p>
+          A produção da cajuína preserva técnicas tradicionais,
+          valorizando o cuidado artesanal e a cultura piauiense.
+        </p>
+      </div>
 
-            <div>
-              <strong>2</strong>
-              <h3>Preparo Artesanal</h3>
-              <p>Produção que preserva a tradição da cajuína piauiense.</p>
-            </div>
+      <div className="processo-midia">
+        <span>Mídia da produção artesanal</span>
+      </div>
+    </div>
 
-            <div>
-              <strong>3</strong>
-              <h3>Produto Final</h3>
-              <p>Sabor, qualidade e tradição prontos para chegar à mesa.</p>
-            </div>
-          </div>
-        </section>
+    <div className="processo-item">
+      <div className="processo-texto">
+        <h3>Processo de Filtragem</h3>
+        <p>
+          A filtragem contribui para a aparência característica da
+          bebida e para a obtenção de um produto de qualidade.
+        </p>
+      </div>
 
+      <div className="processo-midia">
+        <span>Mídia do processo de filtragem</span>
+      </div>
+    </div>
+
+    <div className="processo-item">
+      <div className="processo-texto">
+        <h3>Pasteurização e Qualidade</h3>
+        <p>
+          A pasteurização é uma etapa importante para a conservação
+          da cajuína, mantendo suas características e sua qualidade.
+        </p>
+      </div>
+
+      <div className="processo-midia">
+        <span>Mídia da pasteurização</span>
+      </div>
+    </div>
+  </div>
+</section>
         <section className="destaque">
           <h2>Tradição, processo e qualidade</h2>
           <p>
