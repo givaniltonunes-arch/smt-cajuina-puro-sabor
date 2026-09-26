@@ -225,7 +225,64 @@ footer {
   text-align: center;
   padding: 40px 20px 80px;
 }
+.contato {
+  text-align: center;
+  padding: 50px 20px 80px;
+}
 
+.contato h2 {
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.contato p {
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+.contato-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.contato-form label {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.contato-form textarea {
+  resize: vertical;
+}
+
+.contato-form button {
+  align-self: center;
+  margin-top: 10px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e293b;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.contato-form button:hover {
+  opacity: 0.9;
+}
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .header-container {

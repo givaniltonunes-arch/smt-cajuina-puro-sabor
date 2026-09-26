@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import './App.css'
 import Produtos from './pages/Produtos'
+import Contato from './pages/Contato'
 function App() {
   return (
     <>
@@ -128,6 +129,7 @@ function App() {
 
       </main>
 <Produtos />
+<Contato />
       <Footer />
     </>
   )
