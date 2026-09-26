@@ -1,0 +1,42 @@
+function Produtos() {
+  const produtos = [
+    {
+      nome: "Cajuína Puro Sabor",
+      descricao: "Cajuína de qualidade, produzida com sabor e tradição.",
+    },
+    {
+      nome: "Cajuína Tradicional",
+      descricao: "O sabor tradicional da cajuína do Piauí.",
+    },
+    {
+      nome: "Cajuína Premium",
+      descricao: "Qualidade e sabor em uma experiência especial.",
+    },
+  ];
+
+  return (
+    <main>
+      <section className="produtos-intro">
+        <h1>Nossos Produtos</h1>
+        <p>Conheça os produtos da SMT Cajuína Puro Sabor.</p>
+      </section>
+
+      <section className="produtos-lista">
+        {produtos.map((produto, index) => (
+          <article className="produto-card" key={index}>
+            <div className="produto-imagem">
+              <span>Cajuína</span>
+            </div>
+
+            <div className="produto-conteudo">
+              <h2>{produto.nome}</h2>
+              <p>{produto.descricao}</p>
+            </div>
+          </article>
+        ))}
+      </section>
+    </main>
+  );
+}
+
+export default Produtos;

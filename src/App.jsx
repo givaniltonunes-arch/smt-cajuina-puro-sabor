@@ -1,7 +1,7 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './App.css'
-
+import Produtos from './pages/Produtos'
 function App() {
   return (
     <>
@@ -127,7 +127,7 @@ function App() {
         </section>
 
       </main>
-
+<Produtos />
       <Footer />
     </>
   )
