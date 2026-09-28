@@ -475,3 +475,87 @@ footer {
     width: 100%;
   }
 }
+.producao-intro {
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.producao-intro h1 {
+  color: #1e293b;
+  font-size: 38px;
+  margin: 0 0 10px;
+}
+
+.producao-intro p {
+  color: #475569;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.producao-etapas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 30px 70px;
+}
+
+.producao-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.producao-midia {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e293b;
+  color: #ffffff;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.producao-conteudo {
+  padding: 22px 15px 10px;
+}
+
+.producao-conteudo h2 {
+  color: #1e293b;
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.producao-conteudo p {
+  color: #475569;
+  margin: 0 0 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .producao-etapas {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .producao-etapas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 15px 50px;
+  }
+
+  .producao-card {
+    width: 100%;
+  }
+
+  .producao-intro h1 {
+    font-size: 30px;
+  }
+}

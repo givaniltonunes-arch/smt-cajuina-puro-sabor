@@ -27,7 +27,7 @@ const [produtosApi, setProdutosApi] = useState([]);useEffect(() => {
       </section>
 
       <section className="produtos-lista">
-        {produtosApi.map((produto, index) => (
+        {(produtosApi.length > 0 ? produtosApi : produtos).map((produto, index) => (
           <article className="produto-card" key={index}>
             <div className="produto-imagem" aria-hidden="true">
               <span>Cajuína</span>

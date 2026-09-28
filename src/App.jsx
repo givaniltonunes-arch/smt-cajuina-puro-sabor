@@ -3,6 +3,7 @@ import Footer from './components/Footer'
 import './App.css'
 import Produtos from './pages/Produtos'
 import Contato from './pages/Contato'
+import Producao from './pages/Producao'
 function App() {
   return (
     <>
@@ -130,6 +131,7 @@ function App() {
       </main>
 <Produtos />
 <Contato />
+<Producao />
       <Footer />
     </>
   )
