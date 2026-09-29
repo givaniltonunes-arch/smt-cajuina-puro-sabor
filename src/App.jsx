@@ -6,6 +6,7 @@ import Contato from './pages/Contato'
 import Producao from './pages/Producao'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
+import Carrinho from './pages/Carrinho'
 function App() {
   return (
     <>
@@ -136,6 +137,7 @@ function App() {
 <Producao />
 <Login />
 <Cadastro />
+<Carrinho />
       <Footer />
     </>
   )
