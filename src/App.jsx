@@ -4,6 +4,8 @@ import './App.css'
 import Produtos from './pages/Produtos'
 import Contato from './pages/Contato'
 import Producao from './pages/Producao'
+import Login from './pages/Login'
+import Cadastro from './pages/Cadastro'
 function App() {
   return (
     <>
@@ -132,6 +134,8 @@ function App() {
 <Produtos />
 <Contato />
 <Producao />
+<Login />
+<Cadastro />
       <Footer />
     </>
   )
