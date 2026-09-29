@@ -7,6 +7,7 @@ import Producao from './pages/Producao'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import Carrinho from './pages/Carrinho'
+import Admin from './pages/Admin'
 function App() {
   return (
     <>
@@ -138,6 +139,7 @@ function App() {
 <Login />
 <Cadastro />
 <Carrinho />
+<Admin />
       <Footer />
     </>
   )
