@@ -139,7 +139,7 @@ function App() {
 <Login />
 <Cadastro />
 <Carrinho />
-<Admin />
+{JSON.parse(localStorage.getItem("usuario") || "null")?.tipo === "ADMIN" && <Admin />}
       <Footer />
     </>
   )
