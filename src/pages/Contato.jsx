@@ -1,3 +1,4 @@
+import api from "../services/api";
 import { useState } from "react";
 
 function Contato() {
@@ -15,33 +16,21 @@ function Contato() {
     };
 
     try {
-      const resposta = await fetch("http://localhost:3000/contatos", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(contato),
-      });
-
-      const resultado = await resposta.json();
-
-      if (!resposta.ok) {
-        throw new Error(resultado.mensagem || "Não foi possível enviar a mensagem.");
-      }
+          const resposta = await api.post("/contatos", contato);
 
       setEnviado(true);
       form.reset();
     } catch (error) {
-      alert(error.message);
+      alert(error.response?.data?.mensagem || error.message);
     }
   };
 
   return (
-    <section id="contato" className="contato">
+    <section id="contato-formulario" className="contato">
       <h2>Entre em contato</h2>
 
       <p>
-        Preencha o formulário abaixo para entrar em contato com a Cajuína Puro Sabor.
+        Preencha o formulÃ¡rio abaixo para entrar em contato com a CajuÃ­na Puro Sabor.
       </p>
 
       <form className="contato-form" onSubmit={handleSubmit}>

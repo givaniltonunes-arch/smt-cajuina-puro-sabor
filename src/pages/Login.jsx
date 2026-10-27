@@ -1,3 +1,4 @@
+import api from "../services/api";
 import { useState } from "react";
 
 function Login() {
@@ -25,31 +26,30 @@ function Login() {
 
     setErro("");
     try {
-  const resposta = await fetch("http://127.0.0.1:3000/auth/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email,
-      senha,
-    }),
-  });
+  const resposta = await api.post("/auth/login", {
+  email,
+  senha,
+});
 
-  const dados = await resposta.json();
+const dados = resposta.data;
 
-  if (!resposta.ok) {
-    setErro(dados.mensagem || "E-mail ou senha inválidos.");
-    return;
-  }
+
+  if (!resposta || !dados) {
+  setErro("E-mail ou senha inválidos.");
+  return;
+}
 
   localStorage.setItem("token", dados.token);
   localStorage.setItem("usuario", JSON.stringify(dados.usuario));
 
   console.log("Login realizado com sucesso:", dados);
-window.location.href = "/";} catch (error) {
-  setErro("Não foi possível conectar à API.");
-}
+    window.location.href = "/";
+  } catch (error) {
+    setErro(
+      error.response?.data?.mensagem ||
+      "Não foi possível conectar à API."
+    );
+  }
   }
 
   return (

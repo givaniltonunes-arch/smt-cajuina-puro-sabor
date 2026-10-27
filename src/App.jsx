@@ -1,3 +1,4 @@
+
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './App.css'
@@ -8,13 +9,13 @@ import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import Carrinho from './pages/Carrinho'
 import Admin from './pages/Admin'
+
 function App() {
   return (
     <>
       <Header />
 
       <main id="inicio">
-
         <section className="hero">
           <div className="hero-text">
             <span className="hero-label">Tradição piauiense</span>
@@ -32,7 +33,10 @@ function App() {
           </div>
 
           <div className="hero-visual">
-            <span>Imagem da Cajuína</span>
+            <img
+              src="/imagens/cajuina-puro-sabor.png"
+              alt="Cajuína Puro Sabor"
+            />
           </div>
         </section>
 
@@ -56,90 +60,109 @@ function App() {
           </div>
 
           <div className="historia-visual">
-            <span>Nossa tradição</span>
+            <img
+              src="/imagens/nossa-tradicao.png"
+              alt="Cajuína Puro Sabor, tradição do Piauí"
+            />
           </div>
         </section>
 
         <section id="processo" className="processo">
-  <span className="section-label">Nosso processo</span>
+          <span className="section-label">Nosso processo</span>
 
-  <h2>Processo Produtivo</h2>
+          <h2>Processo Produtivo</h2>
 
-  <p className="section-intro">
-    Tradição, cuidado e qualidade em cada etapa da produção da cajuína.
-  </p>
-
-  <div className="processo-detalhes">
-    <div className="processo-item">
-      <div className="processo-texto">
-        <h3>Produção Artesanal</h3>
-        <p>
-          A produção da cajuína preserva técnicas tradicionais,
-          valorizando o cuidado artesanal e a cultura piauiense.
-        </p>
-      </div>
-
-      <div className="processo-midia">
-        <span>Mídia da produção artesanal</span>
-      </div>
-    </div>
-
-    <div className="processo-item">
-      <div className="processo-texto">
-        <h3>Processo de Filtragem</h3>
-        <p>
-          A filtragem contribui para a aparência característica da
-          bebida e para a obtenção de um produto de qualidade.
-        </p>
-      </div>
-
-      <div className="processo-midia">
-        <span>Mídia do processo de filtragem</span>
-      </div>
-    </div>
-
-    <div className="processo-item">
-      <div className="processo-texto">
-        <h3>Pasteurização e Qualidade</h3>
-        <p>
-          A pasteurização é uma etapa importante para a conservação
-          da cajuína, mantendo suas características e sua qualidade.
-        </p>
-      </div>
-
-      <div className="processo-midia">
-        <span>Mídia da pasteurização</span>
-      </div>
-    </div>
-  </div>
-</section>
-        <section className="destaque">
-          <h2>Tradição, processo e qualidade</h2>
-          <p>
-            Uma bebida que representa a cultura e a identidade do Piauí.
+          <p className="section-intro">
+            Tradição, cuidado e qualidade em cada etapa da produção da cajuína.
           </p>
+
+          <div className="processo-detalhes">
+            <div className="processo-item">
+              <div className="processo-texto">
+                <h3>Produção Artesanal</h3>
+
+                <p>
+                  A produção da cajuína preserva técnicas tradicionais,
+                  valorizando o cuidado artesanal e a cultura piauiense.
+                </p>
+              </div>
+
+              <div className="processo-midia">
+                <img
+                  src="/imagens/producao-artesanal.png"
+                  alt="Produção artesanal da cajuína com cajus frescos"
+                />
+              </div>
+            </div>
+
+            <div className="processo-item">
+              <div className="processo-texto">
+                <h3>Processo de Filtragem</h3>
+
+                <p>
+                  A filtragem contribui para a aparência característica da
+                  bebida e para a obtenção de um produto de qualidade.
+                </p>
+              </div>
+
+                            <div className="processo-midia">
+                <img
+                  src="/imagens/processo-filtragem.png"
+                  alt="Processo de filtragem da cajuína"
+                />
+              </div>
+            </div>
+
+            <div className="processo-item">
+              <div className="processo-texto">
+                <h3>Pasteurização e Qualidade</h3>
+
+                <p>
+                  A pasteurização é uma etapa importante para a conservação
+                  da cajuína, mantendo suas características e sua qualidade.
+                </p>
+              </div>
+
+              <div className="processo-midia">
+  <img
+    src="/imagens/pasteurizacao-qualidade.png"
+    alt="Pasteurização das garrafas de cajuína"
+  />
+</div>
+            </div>
+          </div>
+        </section>
+
+                <section className="destaque">
+          <img
+            src="/imagens/destaque-cajuina.png"
+            alt="Cajuína Puro Sabor, tradição e cultura do Piauí"
+          />
         </section>
 
         <section id="contato" className="cta">
-          <h2>Quer levar a Cajuína Puro Sabor para o seu estabelecimento?</h2>
+          <h2>
+            Quer levar a Cajuína Puro Sabor para o seu estabelecimento?
+          </h2>
 
           <p>
             Entre em contato conosco e conheça nossas possibilidades de parceria.
           </p>
 
-          <a href="#contato" className="secondary-button">
+          <a href="#contato-formulario" className="secondary-button">
             Fale Conosco
           </a>
         </section>
-
       </main>
-<Produtos />
-<Contato />
-<Producao />
-<Login />
-<Cadastro />
-<Carrinho />
-{JSON.parse(localStorage.getItem("usuario") || "null")?.tipo === "ADMIN" && <Admin />}
+
+      <Produtos />
+      <Contato />
+      <Producao />
+      <Login />
+      <Cadastro />
+      <Carrinho />
+      <Admin />
+
       <Footer />
     </>
   )

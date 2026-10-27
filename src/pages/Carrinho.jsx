@@ -73,13 +73,31 @@ function Carrinho() {
           <div className="carrinho-conteudo">
             {carrinho.length === 0 ? (
               <div className="carrinho-vazio">
-                <h2>Seu carrinho está vazio</h2>
+  <div className="carrinho-vazio-icone" aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2 3h2l2.4 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L21 8H5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="10" cy="20" r="1.4" fill="currentColor" />
+      <circle cx="18" cy="20" r="1.4" fill="currentColor" />
+    </svg>
+  </div>
 
-                <p>
-                  Adicione produtos para visualizar os itens,
-                  quantidades e valores da sua compra.
-                </p>
-              </div>
+  <h2>Seu carrinho está vazio</h2>
+
+  <p>
+    Adicione produtos para visualizar os itens,
+    quantidades e valores da sua compra.
+  </p>
+</div>
             ) : (
               <div>
                 {carrinho.map((produto) => (

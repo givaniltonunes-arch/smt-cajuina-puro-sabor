@@ -1,3 +1,4 @@
+import api from "../services/api";
 import { useState } from "react";
 
 function Cadastro() {
@@ -29,21 +30,15 @@ function Cadastro() {
     }
 
     try {
-      const resposta = await fetch("http://127.0.0.1:3000/usuarios", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          nome,
-          email,
-          senha,
-        }),
-      });
+      const resposta = await api.post("/usuarios", {
+  nome,
+  email,
+  senha,
+});
 
-      const dados = await resposta.json();
+      const dados = resposta.data;
 
-      if (!resposta.ok) {
+      if (!resposta || !dados) {
         setErro(dados.mensagem || "Não foi possível realizar o cadastro.");
         return;
       }
@@ -57,7 +52,11 @@ function Cadastro() {
       console.log("Cadastro realizado com sucesso:", dados);
     } catch (error) {
       console.error(error);
-      setErro("Não foi possível conectar à API.");
+     setErro(
+  error.response?.data?.mensagem ||
+  error.message ||
+  "Não foi possível conectar à API."
+);
     }
   }
 
